@@ -21,6 +21,13 @@ A aplicação utiliza boas práticas de desenvolvimento, como:
 
 ## 🚀 Principais Características
 
+## ⚙️ Funcionalidades
+
+- Criar, consultar, atualizar e deletar hortas.  
+- Validação de dados de entrada.  
+- Banco de dados **H2 (in-memory)** para desenvolvimento.  
+- Preparado para integração com **PostgreSQL** em produção.  
+---
 ### 🔹 Arquitetura Hexagonal
 - **Portas de Entrada (Ports In):** Interfaces que definem os casos de uso da aplicação.  
 - **Portas de Saída (Ports Out):** Interfaces que abstraem a interação com o banco de dados.  
