@@ -48,3 +48,25 @@ A aplicação utiliza boas práticas de desenvolvimento, como:
 - Testes **unitários** e de **integração** para garantir a qualidade do código.  
 
 ---
+
+---
+
+## 📂 Estrutura do Código
+
+A aplicação está organizada em pacotes que seguem o padrão de **arquitetura hexagonal**:
+
+```text
+src/
+├── main/
+│   ├── java/com/leleco_dev/PXG_API/
+│   │   ├── api/rest/hortas/         # Controladores REST
+│   │   ├── core/
+│   │   │   ├── application/service/ # Serviços de aplicação (lógica de negócio)
+│   │   │   ├── domain/entity/       # Entidades de domínio
+│   │   │   ├── exception/           # Exceções personalizadas
+│   │   │   ├── port/in/             # Interfaces de entrada (casos de uso)
+│   │   │   ├── port/out/            # Interfaces de saída (repositórios)
+│   │   ├── PXGApiApplication.java   # Classe principal da aplicação
+│   ├── resources/                   # Configurações e scripts do banco
+├── test/                            # Testes unitários e de integração
+
