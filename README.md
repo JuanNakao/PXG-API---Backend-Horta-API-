@@ -55,7 +55,7 @@ A aplicação utiliza boas práticas de desenvolvimento, como:
 
 A aplicação está organizada em pacotes que seguem o padrão de **arquitetura hexagonal**:
 
-```text
+
 src/
 ├── main/
 │   ├── java/com/leleco_dev/PXG_API/
@@ -76,20 +76,17 @@ src/
 
 ### 1. Entidade [Horta](https://github.com/JuanNakao/PXG-API---Backend-Horta-API-/blob/main/Horta)
 
-**Interface HortaRepositoryPortOut** (package `com.leleco_dev.PXG_API.core.port.out.hortas`):
+Representa o modelo de domínio da aplicação:
 
-```java
-package com.leleco_dev.PXG_API.core.port.out.hortas;
-
-import com.leleco_dev.PXG_API.core.domain.entity.Horta;
-
-public interface HortaRepositoryPortOut {
-
-    Horta findById(String id);
-    Horta save(Horta domain);
-    void deleteById(String id);
-    boolean existsByName(String name);
-    Horta update(Horta domain);
-
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Horta {
+    private String id;
+    private String name;
+    private String location;
+    private String description;
+    private String imageUrl; // Preparado para lógica futura de upload de imagens
 }
 
