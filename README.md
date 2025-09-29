@@ -55,7 +55,7 @@ A aplicação utiliza boas práticas de desenvolvimento, como:
 
 A aplicação está organizada em pacotes que seguem o padrão de **arquitetura hexagonal**:
 
-
+```text
 src/
 ├── main/
 │   ├── java/com/leleco_dev/PXG_API/
@@ -69,24 +69,63 @@ src/
 │   │   ├── PXGApiApplication.java   # Classe principal da aplicação
 │   ├── resources/                   # Configurações e scripts do banco
 ├── test/                            # Testes unitários e de integração
+```
 
 ---
 
-## ⚙️ Componentes Importantes
+## 💻 Requisitos Locais
 
-### 1. Entidade [Horta](https://github.com/JuanNakao/PXG-API---Backend-Horta-API-/blob/main/Horta)
+Certifique-se de ter os seguintes requisitos instalados no ambiente local:
 
-Representa o modelo de domínio da aplicação:
+- **Java 17 (JDK)**
+- **Maven** (ou usar o wrapper `mvnw` incluso)
+- **Banco de dados H2** (in-memory para desenvolvimento)
 
-@Builder
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Horta {
-    private String id;
-    private String name;
-    private String location;
-    private String description;
-    private String imageUrl; // Preparado para lógica futura de upload de imagens
+---
+
+## ⚡ Configuração Rápida
+
+1. **Clonar o repositório e entrar na pasta do backend:**
+
+```bash
+git clone <SEU_REPO_URL>
+cd BACK/HORTA-API
+```
+## Build e execução:
+
+Usando Maven Wrapper (mvnw):
+
+```bash
+./mvnw clean package
+./mvnw spring-boot:run
+```
+##Sem Maven Wrapper (usando Maven instalado localmente):
+
+```bash
+mvn clean package
+mvn spring-boot:run
+```
+A aplicação será iniciada em:
+
+```bash
+
+http://localhost:8080/PXG-API/v1
+```
+
+## 📝 Endpoints Principais
+
+### 1. Criar uma Horta
+
+**POST** `/hortas`
+
+**Corpo da requisição (JSON):**
+
+```json
+{
+  "name": "Minha Horta",
+  "location": "Rua das Flores, 123",
+  "description": "Horta orgânica"
 }
+```
+
 
