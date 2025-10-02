@@ -7,7 +7,7 @@ Ele foi desenvolvido em **Java 17** com **Spring Boot** e segue o padrão **Hexa
 
 ---
 
-## 📖 Resumo do Projeto
+## Resumo do Projeto
 
 O backend é responsável por fornecer uma **API REST** para gerenciar hortas.  
 Ele permite criar, consultar, atualizar e deletar hortas, além de realizar validações e interagir com o banco de dados.  
@@ -19,16 +19,16 @@ A aplicação utiliza boas práticas de desenvolvimento, como:
 
 ---
 
-## 🚀 Principais Características
+## Principais Características
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
 - Criar, consultar, atualizar e deletar hortas.  
 - Validação de dados de entrada.  
 - Banco de dados **H2 (in-memory)** para desenvolvimento.  
 - Preparado para integração com **PostgreSQL** em produção.  
 ---
-### 🔹 Arquitetura Hexagonal
+### Arquitetura Hexagonal
 - **Portas de Entrada (Ports In):** Interfaces que definem os casos de uso da aplicação.  
 - **Portas de Saída (Ports Out):** Interfaces que abstraem a interação com o banco de dados.  
 - **Adaptadores:** Implementações concretas das portas de entrada e saída.  
